@@ -1,8 +1,8 @@
 package ru.netology.services;
 
 public class StatCalcService {
-    public int calcTotal(long[] sales) {
-        int total = 0;
+    public long calcTotal(long[] sales) {
+        long total = 0;
 
         for (int i = 0; i < sales.length; i++) {
             total += sales[i];
@@ -11,12 +11,10 @@ public class StatCalcService {
         return total;
     }
 
-    public int calcAverage(long[] sales) {
-        int total = calcTotal(sales);
+    public long calcAverage(long[] sales) {
+        long total = calcTotal(sales);
 
-        int avg = total/sales.length;
-
-        return avg;
+        return (total/sales.length);
     }
 
     public int minSales(long[] sales) { // Я поленился...
@@ -43,9 +41,9 @@ public class StatCalcService {
         return maxMonth + 1; 
     }
 
-    public int calcStonks(long[] sales) {
-        int average = calcAverage(sales);
-        int months = 0;
+    public long calcStonks(long[] sales) {
+        long average = calcAverage(sales);
+        long months = 0;
 
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] > average) {
@@ -56,9 +54,9 @@ public class StatCalcService {
         return months;
     }
 
-    public int calcUnstonks(long[] sales) {
-        int average = calcAverage(sales);
-        int months = 0;
+    public long calcUnstonks(long[] sales) {
+        long average = calcAverage(sales);
+        long months = 0;
 
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] < average) {
