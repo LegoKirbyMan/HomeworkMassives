@@ -12,8 +12,8 @@ public class StatCalcServiceTest {
             8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
         };
 
-        long expected = 180;
-        long actual = calculator.calcTotal(inputArray);
+        int expected = 180;
+        int actual = (int)calculator.calcTotal(inputArray);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -26,8 +26,8 @@ public class StatCalcServiceTest {
             8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
         };
 
-        long expected = 15;
-        long actual = calculator.calcAverage(inputArray);
+        int expected = 15;
+        int actual = calculator.calcAverage(inputArray);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -40,8 +40,8 @@ public class StatCalcServiceTest {
             8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
         };
 
-        long expected = 9;
-        long actual = calculator.minSales(inputArray);
+        int expected = 9;
+        int actual = calculator.minSales(inputArray);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -54,8 +54,8 @@ public class StatCalcServiceTest {
             8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
         };
 
-        long expected = 8;
-        long actual = calculator.maxSales(inputArray);
+        int expected = 8;
+        int actual = calculator.maxSales(inputArray);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -68,8 +68,8 @@ public class StatCalcServiceTest {
             8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
         };
 
-        long expected = 5;
-        long actual = calculator.calcUnstonks(inputArray);
+        int expected = 5;
+        int actual = calculator.calcUnstonks(inputArray);
 
         Assertions.assertEquals(expected, actual);
     }

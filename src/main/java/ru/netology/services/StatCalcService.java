@@ -11,8 +11,8 @@ public class StatCalcService {
         return total;
     }
 
-    public long calcAverage(long[] sales) {
-        long total = calcTotal(sales);
+    public int calcAverage(long[] sales) {
+        int total = (int)calcTotal(sales);
 
         return (total/sales.length);
     }
@@ -41,9 +41,9 @@ public class StatCalcService {
         return maxMonth + 1; 
     }
 
-    public long calcStonks(long[] sales) {
-        long average = calcAverage(sales);
-        long months = 0;
+    public int calcStonks(long[] sales) {
+        int average = calcAverage(sales);
+        int months = 0;
 
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] > average) {
@@ -54,9 +54,9 @@ public class StatCalcService {
         return months;
     }
 
-    public long calcUnstonks(long[] sales) {
-        long average = calcAverage(sales);
-        long months = 0;
+    public int calcUnstonks(long[] sales) {
+        int average = calcAverage(sales);
+        int months = 0;
 
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] < average) {
